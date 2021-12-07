@@ -1,0 +1,11 @@
+[Unit]
+Description=Safe Shutdown
+Before=basic.target
+After=local-fs.target sysinit.target
+DefaultDependencies=no
+
+[Service]
+ExecStart=/opt/safe-shutdown.lua
+
+[Install]
+WantedBy=basic.target

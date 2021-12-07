@@ -1,0 +1,9 @@
+# Pin 4 = Turn off PSU (RetroFlag SuperPi)
+# Send a signal to the case to cut the power when the kernel says it's safe.
+
+dtoverlay=gpio-poweroff,gpiopin=4,active_low="y"
+
+# Pin 14 = Power LED (RetroFlag SuperPi)
+# This turns ON the power LED as early as possible.
+
+gpio=14=op,dh
